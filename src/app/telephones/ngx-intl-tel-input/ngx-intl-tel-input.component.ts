@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgxIntlTelInputComponent implements OnInit {
 
+  public preferredCountries =  ['cz', 'sk'];
+
   constructor() { }
 
   ngOnInit() {

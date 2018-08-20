@@ -11,11 +11,12 @@ import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 import { DatePickerModule } from 'date-picker-directive';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { InternationalPhoneModule } from 'ng4-intl-phone';
 
 import { AppComponent } from './app.component';
 import { NgxMaskComponent } from './masks/ngx-mask/ngx-mask.component';
 import { Angular2TestMaskComponent } from './masks/angular2-test-mask/angular2-test-mask.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Brmasker4Component } from './masks/brmasker4/brmasker4.component';
 import { LaInputMaskComponent } from './masks/la-input-mask/la-input-mask.component';
 import { DatesComponent } from './dates/dates.component';
@@ -25,6 +26,7 @@ import { BootstrapDatetimePickerComponent } from './dates/bootstrap-datetime-pic
 import { DatePickerDirectiveComponent } from './dates/date-picker-directive/date-picker-directive.component';
 import { TelephonesComponent } from './telephones/telephones.component';
 import { NgxIntlTelInputComponent } from './telephones/ngx-intl-tel-input/ngx-intl-tel-input.component';
+import { Ng4IntlPhonePrefixInputComponent } from './telephones/ng4-intl-phone-prefix-input/ng4-intl-phone-prefix-input.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { NgxIntlTelInputComponent } from './telephones/ngx-intl-tel-input/ngx-in
     DatePickerDirectiveComponent,
     TelephonesComponent,
     NgxIntlTelInputComponent,
+    Ng4IntlPhonePrefixInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,9 @@ import { NgxIntlTelInputComponent } from './telephones/ngx-intl-tel-input/ngx-in
     DatePickerModule,
     BsDropdownModule.forRoot(),
     NgxIntlTelInputModule,
-    FormsModule
+    InternationalPhoneModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatFormFieldModule,
@@ -66,6 +71,6 @@ import { NgxIntlTelInputComponent } from './telephones/ngx-intl-tel-input/ngx-in
     MatNativeDateModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
