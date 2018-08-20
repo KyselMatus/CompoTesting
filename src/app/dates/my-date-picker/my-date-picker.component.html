@@ -1,0 +1,6 @@
+<form #myForm="ngForm" novalidate>
+  <label for="myDatePicker">My date picker</label>
+  <my-date-picker name="myDatePicker" id="myDatePicker"
+                  locale="cs" [options]="myDatePickerOptions"
+                  [(ngModel)]="model"></my-date-picker>
+</form>

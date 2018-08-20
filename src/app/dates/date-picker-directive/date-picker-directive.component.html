@@ -1,0 +1,4 @@
+<label for="datePickerDirective">Date picker directive</label>
+<input type="text" name="datePickerDirective" id="datePickerDirective"
+  placeholder="Input Date" date-picker singleDatePicker="true" min-date="01/01/1900"
+  max-date="31/12/2999" (dateselected)="dateSelected($event)" [value]="dateval"/>

@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../compotesting/node_modules/ngx-intl-tel-input/resource/intl-tel-input.css"
             ],
             "scripts": []
           },
