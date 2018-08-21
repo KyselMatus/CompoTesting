@@ -1,10 +1,13 @@
 .row {
   position: relative;
   float: right;
-  right: 15px;
   top: 5px;
 }
 
 label {
   padding-right: 8px;
+}
+
+.inputField {
+  float: right;
 }

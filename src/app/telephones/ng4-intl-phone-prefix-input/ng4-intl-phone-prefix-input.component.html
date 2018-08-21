@@ -1,7 +1,7 @@
 <div class="row">
-  <label for="intlPhonePrefix">International phone prefix input</label>
-  <form [formGroup]="myForm" novalidate>
-    <int-phone-prefix name="intlPhonePrefix" id="intlPhonePrefix"
+  <form [formGroup]="myForm"  novalidate>
+    <label class="col-lg-6" for="intlPhonePrefix">International phone prefix input</label>
+    <int-phone-prefix name="intlPhonePrefix" id="intlPhonePrefix" class="inputField col-lg-6"
       [defaultCountry]="'cz'" [locale]="'en'" formControlName="myPhone"></int-phone-prefix>
   </form>
 </div>

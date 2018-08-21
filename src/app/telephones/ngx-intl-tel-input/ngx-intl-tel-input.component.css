@@ -1,7 +1,10 @@
 label {
+  position: relative;
   padding-right: 8px;
+  top: 6px;
 }
 
 .inputField {
   width: 200px;
+  float: right;
 }
