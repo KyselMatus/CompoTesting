@@ -1,0 +1,2 @@
+<label for="cc-number">Ngx credit cards</label>
+<input name="cc-number" type="tel" [(ngModel)]="cardModel" id="cc-number" maxlength="19" (input)="valuechange($event.target.value)">

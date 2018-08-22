@@ -12,6 +12,7 @@ import { DatePickerModule } from 'date-picker-directive';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { InternationalPhoneModule } from 'ng4-intl-phone';
+import { NgXCreditCardsModule } from 'ngx-credit-cards';
 
 import { AppComponent } from './app.component';
 import { NgxMaskComponent } from './masks/ngx-mask/ngx-mask.component';
@@ -27,6 +28,8 @@ import { DatePickerDirectiveComponent } from './dates/date-picker-directive/date
 import { TelephonesComponent } from './telephones/telephones.component';
 import { NgxIntlTelInputComponent } from './telephones/ngx-intl-tel-input/ngx-intl-tel-input.component';
 import { Ng4IntlPhonePrefixInputComponent } from './telephones/ng4-intl-phone-prefix-input/ng4-intl-phone-prefix-input.component';
+import { CardsComponent } from './cards/cards.component';
+import { NgxCreditCardsComponent } from './cards/ngx-credit-cards/ngx-credit-cards.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,8 @@ import { Ng4IntlPhonePrefixInputComponent } from './telephones/ng4-intl-phone-pr
     TelephonesComponent,
     NgxIntlTelInputComponent,
     Ng4IntlPhonePrefixInputComponent,
+    CardsComponent,
+    NgxCreditCardsComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +66,7 @@ import { Ng4IntlPhonePrefixInputComponent } from './telephones/ng4-intl-phone-pr
     BsDropdownModule.forRoot(),
     NgxIntlTelInputModule,
     InternationalPhoneModule,
+    NgXCreditCardsModule,
     FormsModule,
     ReactiveFormsModule
   ],

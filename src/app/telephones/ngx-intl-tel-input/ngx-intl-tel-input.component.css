@@ -1,10 +1,12 @@
 label {
   position: relative;
-  padding-right: 8px;
+  right: -25px;
   top: 6px;
 }
 
 .inputField {
-  width: 200px;
+  position: relative;
+  width: 225px;
   float: right;
+  right: -15px;
 }

@@ -36,6 +36,7 @@
     "ng4-intl-phone": "^1.2.1",
     "ng4-mask": "^1.0.5",
     "ngx-bootstrap": "^3.0.1",
+    "ngx-credit-cards": "^1.0.9",
     "ngx-intl-tel-input": "^1.0.6",
     "ngx-mask": "^6.1.2",
     "ngx-mask-fixed": "^3.0.2",
