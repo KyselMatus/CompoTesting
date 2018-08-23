@@ -17,9 +17,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 If you encounter this error:
 ```
-ERROR Error: Uncaught (in promise): Error: StaticInjectorError(...)[BsDropdownDirective -> ComponentLoaderFactory]: StaticInjectorError(Platform: core)[BsDropdownDirective -> ComponentLoaderFactory]: NullInjectorError: No provider for ComponentLoaderFactory! Error: StaticInjectorError(...)[BsDropdownDirective -> ComponentLoaderFactory]: StaticInjectorError(Platform: core)[BsDropdownDirective -> ComponentLoaderFactory]:
+ERROR Error: Uncaught (in promise): Error: StaticInjectorError(...)[BsDropdownDirective -> ComponentLoaderFactory]:
+StaticInjectorError(Platform: core)[BsDropdownDirective -> ComponentLoaderFactory]:
+NullInjectorError: No provider for ComponentLoaderFactory! Error: StaticInjectorError(...)[BsDropdownDirective ->
+ComponentLoaderFactory]: StaticInjectorError(Platform: core)[BsDropdownDirective -> ComponentLoaderFactory]:
 ```
-fix it by adding `.forRoot()` after `NgxIntlTelInputModule.decorators.args.imports.BsDropdownModule` in `node_modules/ngx-intl-tel-input/index.js` file.
+fix it by adding `.forRoot()` after `NgxIntlTelInputModule.decorators.args.imports.BsDropdownModule` in
+```
+node_modules/ngx-intl-tel-input/index.js
+```
 
 ## Build
 
