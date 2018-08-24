@@ -27,11 +27,21 @@ export class Angular2TestMaskComponent implements OnInit {
     console.log('ng2tm name: ', name);
     switch (name) {
       case 'RC':
-        this.mask = [/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/];
+        this.mask = {
+          mask: [/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+        };
         break;
       case 'cardValidity':
-        this.mask = [/[0-1]/, /\d/, '/', /\d/, /\d/];
+        this.mask = {
+          mask: [/[0-1]/, /\d/, '/', /\d/, /\d/]
+        };
         break;
+      case 'cardNumber':
+        this.mask = {
+          mask: [/./, /./, /./, /./, ' ', /./, /./, 'XX XXXX ', /./, /./, /./, /./],
+          placeholderChar: '\u2000',
+          keepCharPositions: true
+        };
     }
   }
 }

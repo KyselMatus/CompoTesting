@@ -11,6 +11,9 @@ export class NgxMaskComponent implements OnInit {
 
   public mask;
   public customPatterns = {'1': { pattern: new RegExp('[0-1]')}, '0': { pattern: new RegExp('\d')}};
+  public specChar = [];
+  public dropSpecial = true;
+  public placeholder = '';
 
   constructor() { }
 
@@ -27,6 +30,12 @@ export class NgxMaskComponent implements OnInit {
         break;
       case 'cardValidity':
         this.mask = '00/00';
+        break;
+      case 'cardNumber':
+        this.mask = 'AAAA AAXX XXXX AAAA';
+        this.specChar = ['X', ' '];
+        this.dropSpecial = false;
+        this.placeholder = '---- --XX XXXX ----';
         break;
     }
   }
