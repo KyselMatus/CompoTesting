@@ -12,7 +12,6 @@ export class MyDatePickerComponent implements OnInit {
     // other options...
     dateFormat: 'dd.mm.yyyy',
     width: '200px',
-
   };
 
   // Initialized to specific date.

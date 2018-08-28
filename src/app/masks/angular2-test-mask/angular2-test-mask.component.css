@@ -2,3 +2,9 @@
 label {
   padding-right: 5px;
 }
+
+input {
+  font-family: monospace;
+  width: 199px;
+  height: 30px;
+}

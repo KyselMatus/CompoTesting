@@ -11,6 +11,9 @@ export class Angular2TestMaskComponent implements OnInit {
 
   public myModel = '';
   public mask;
+  public sentValue;
+  public placeholder = '';
+  public isCardNo = false;
 
   constructor() {
     console.log('2input: ', this.data);
@@ -28,7 +31,9 @@ export class Angular2TestMaskComponent implements OnInit {
     switch (name) {
       case 'RC':
         this.mask = {
-          mask: [/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+          mask: [/./, /./, /./, /./, /./, /./, '/', /./, /./, /./, /./],
+          placeholderChar: '\u2000',
+          guide: false,
         };
         break;
       case 'cardValidity':
@@ -37,11 +42,23 @@ export class Angular2TestMaskComponent implements OnInit {
         };
         break;
       case 'cardNumber':
+        this.isCardNo = true;
+        this.placeholder = '.... ..XX XXXX ....';
         this.mask = {
-          mask: [/./, /./, /./, /./, ' ', /./, /./, 'XX XXXX ', /./, /./, /./, /./],
-          placeholderChar: '\u2000',
+          mask: [/\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, 'X', 'X', ' ', 'X', 'X', 'X', 'X', ' ', /\d/, /\d/, /\d/, /\d/],
+          placeholderChar: '.',
           keepCharPositions: true
         };
+    }
+  }
+
+  valuechange = (newValue) => {
+    if (this.isCardNo) {
+      let sentValue = this.myModel.replace(/[^0-9A-Z]/g, '');
+      if (sentValue[sentValue.length - 1] === 'X') {
+        sentValue = sentValue.substring(0, sentValue.length - 6);
+      }
+      console.log('Credit card no. sent value: ', sentValue);
     }
   }
 }
